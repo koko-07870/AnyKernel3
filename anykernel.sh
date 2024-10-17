@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Spark-1.1 Kernel by koko @ xda-developers
+kernel.string=Spark Kernel by koko @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -28,7 +28,7 @@ set_perm_recursive 0 0 750 750 $RAMDISK/init* $RAMDISK/sbin;
 } # end attributes
 
 # boot shell variables
-BLOCK=/dev/block/bootdevice/by-name/boot;
+BLOCK=auto;
 IS_SLOT_DEVICE=0;
 RAMDISK_COMPRESSION=lz4;
 PATCH_VBMETA_FLAG=auto;
@@ -45,7 +45,7 @@ replace_string init.rc "cpuctl cpu,timer_slack" "mount cgroup none /dev/cpuctl c
 
 # init.tuna.rc
 backup_file init.tuna.rc;
-insert_line init.tuna.rc "nodiratime barrier=0" after "mount_all /fstab.tuna" "\tmount ext4 /dev/block/bootdevice/by-name/userdata /data remount nosuid nodev noatime nodiratime barrier=0";
+insert_line init.tuna.rc "nodiratime barrier=0" after "mount_all /fstab.tuna" "\tmount ext4 /dev/block/by-name/userdata /data remount nosuid nodev noatime nodiratime barrier=0";
 append_file init.tuna.rc "bootscript" init.tuna;
 
 # fstab.tuna
