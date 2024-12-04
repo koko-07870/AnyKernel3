@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Spark Kernel by koko @ xda-developers
+kernel.string=Spark Kernel by koko-07 @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.systemless=1
