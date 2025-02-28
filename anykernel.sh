@@ -27,7 +27,7 @@ set_perm_recursive 0 0 750 750 $RAMDISK/init* $RAMDISK/sbin;
 
 # boot shell variables
 BLOCK=/dev/block/bootdevice/by-name/boot;
-IS_SLOT_DEVICE=0;
+IS_SLOT_DEVICE=auto;
 RAMDISK_COMPRESSION=lz4;
 PATCH_VBMETA_FLAG=auto;
 
